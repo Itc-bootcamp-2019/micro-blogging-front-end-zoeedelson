@@ -57,7 +57,8 @@ class PostBox extends React.Component {
             <div className="container">
                 <div className="fullPostBox">
                     <textarea className="postBox" value={this.state.text} onChange={this.tweetText} placeholder= "What's on your mind..."/>
-                    <button className="tweetButton" onClick={() => {this.state.text.length<140 && this.sendToServer()}}>Tweet</button>
+                    {this.state.text.length<140 && <button className="tweetButton" onClick={() => {this.state.text.length<140 && this.sendToServer()}}>Tweet</button>}
+                    {this.state.text.length>=140 && <button className="tweetButtonDisabled" >Tweet</button>}
                 </div>
                 <div>
                     {this.state.postData.map((post)=>this.makePublishableTweet(post))}
