@@ -12,7 +12,7 @@ class PublishedTweet extends React.Component {
             <div className='publishedTweet'>
                 <div className='nameDateContainer'>
                     <div className='name'>yonatan</div>
-                    <div className='date'>{Date.now()}</div>
+                    <div className='date'>{this.props.date}</div>
                 </div>
                 <div className='publishedText'>{this.props.insideText}</div>
             </div>

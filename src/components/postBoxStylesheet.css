@@ -19,6 +19,7 @@
     background: transparent; 
     border: none;
     resize:none;
+    color: white;
 }
 
 .tweetButton{
@@ -39,5 +40,4 @@
     display: flex;
     flex-direction: column;  
     align-items: center;
-  
 }
