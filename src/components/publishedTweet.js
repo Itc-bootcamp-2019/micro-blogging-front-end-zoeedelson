@@ -11,7 +11,7 @@ class PublishedTweet extends React.Component {
         return(
             <div className='publishedTweet'>
                 <div className='nameDateContainer'>
-                    <div className='name'>yonatan</div>
+                    <div className='name'>{this.props.userName}</div>
                     <div className='date'>{this.props.date}</div>
                 </div>
                 <div className='publishedText'>{this.props.insideText}</div>
