@@ -55,3 +55,8 @@
     flex-direction: column;  
     align-items: center;
 }
+.postBoxWait{
+    background-image: url('http://www.broadwaybalancesamerica.com/images/ajax-loader.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
