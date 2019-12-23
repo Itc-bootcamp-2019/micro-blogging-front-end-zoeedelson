@@ -3,6 +3,7 @@ import './allPostsStylesheet.css';
 import PostBox from './postBox';
 import PublishedTweet from './publishedTweet';
 
+
 class AllPosts extends React.Component {
     constructor(props) {
         super(props);
@@ -10,10 +11,10 @@ class AllPosts extends React.Component {
     }
     render(){
         return(
-            <div className="allContainer">
-                <PostBox/>
-                
-            </div>
+        <div className="allContainer">
+            <PostBox />
+            
+        </div>
         )
     }
 
