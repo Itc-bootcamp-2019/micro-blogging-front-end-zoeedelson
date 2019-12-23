@@ -45,5 +45,6 @@
     color: #FFFFFF; 
     text-align: left;
     padding: 0 20px 20px 20px; 
+    overflow-wrap: break-word;
 
 }
