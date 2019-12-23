@@ -20,15 +20,19 @@ class PostBox extends React.Component {
         let tweetArray = getTweets();
         tweetArray.then((response) => response.data.tweets.map((entry) =>
             this.mountingAll(entry)
-        ))
+        ));
+        setInterval(() => {tweetArray = getTweets();
+            tweetArray.then((response) => 
+            this.setState({postData: response.data.tweets}))},1000)
     }
 
     mountingAll(item) {
         let prev = this.state.postData;
         this.setState({
             postData:
-                [item,
-                    ...prev
+                [
+                    ...prev,
+                    item
                 ]
         })
     }

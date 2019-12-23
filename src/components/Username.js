@@ -1,5 +1,4 @@
 import React from 'react';
-import MyProvider from './MyContext.js'
 
 class Username extends React.Component {
     constructor(props){
