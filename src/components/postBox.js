@@ -75,7 +75,11 @@ class PostBox extends React.Component {
 
 
     tweetText = (e) => {
-        this.setState({ text: e.target.value });
+        if (JSON.parse(localStorage.getItem('1')) == null){
+            alert('In order to write a Tweet, you must submit a username on the Username tab.')
+        } else {
+            this.setState({ text: e.target.value })
+        }
     }
     clickable(){
         if (this.state.isLoading == true && this.state.text.length <140){
@@ -89,8 +93,11 @@ class PostBox extends React.Component {
 
         return (
             <div className="container">
+
                 <div className="fullPostBox">
-                    {this.state.isLoading == true && JSON.parse(localStorage.getItem('1')) == null ?  (<textarea className="postBox postBoxWait" placeholder="Loading, please wait..." />) : (<textarea className="postBox" value={this.state.text} onChange={this.tweetText} placeholder="What's on your mind..." />)}
+                    {this.state.isLoading == true && JSON.parse(localStorage.getItem('1')) == null ?  
+                        (<textarea className="postBox postBoxWait" placeholder="Loading, please wait..." />) 
+                        : (<textarea className="postBox" value={this.state.text} onChange={this.tweetText} placeholder="What's on your mind..." />)}
                     {JSON.parse(localStorage.getItem('1')) != null && this.state.isLoading == false && this.state.text.length < 140 ? (<button className="tweetButton" onClick={() => { this.sendToServer() }}>Tweet</button>) : (<button className="tweetButtonDisabled" >Tweet</button> )}
                 </div>
                 <MyContext.Provider value={this.state}>
