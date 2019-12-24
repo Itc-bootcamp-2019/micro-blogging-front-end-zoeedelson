@@ -93,7 +93,6 @@ class PostBox extends React.Component {
 
         return (
             <div className="container">
-
                 <div className="fullPostBox">
                     {this.state.isLoading == true && JSON.parse(localStorage.getItem('1')) == null ?  
                         (<textarea className="postBox postBoxWait" placeholder="Loading, please wait..." />) 
@@ -103,10 +102,6 @@ class PostBox extends React.Component {
                 <MyContext.Provider value={this.state}>
                     <PastPosts/>
                 </MyContext.Provider>
-
-                {/* <div>
-                    {this.state.postData.map((post) => this.makePublishableTweet(post))}
-                </div> */}
             </div>
         )
     }

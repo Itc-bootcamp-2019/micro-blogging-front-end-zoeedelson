@@ -1,0 +1,38 @@
+.profile{
+    font-size:36px;
+    position:relative;
+    margin-bottom: 26px;
+}
+.username{
+    font-size:18px;
+    position: relative;
+    left:0;
+}
+.container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: space-between;   
+}
+.button{
+    align-self:flex-end;
+    background: #007BFF;
+    border-radius: 4px;
+    width: 68px;
+    height: 34px;
+    color: white;
+    border: none;
+}
+.textbox{
+    width: 600px;
+    height:61px;
+    border: 2px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    background: transparent; 
+    
+}

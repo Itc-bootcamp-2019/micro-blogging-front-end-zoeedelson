@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './UsernameStylesheet.css';
 class Username extends React.Component {
     constructor(props){
         super(props);
@@ -21,10 +21,17 @@ class Username extends React.Component {
 
     render(){
         return(
-            <div>
-                Username:
-                <input type="text" value={this.state.text} onChange={this.inputText}/>
-                <button onClick={() => this.sendToLocalStorage()}>Submit</button>
+            <div className="container">
+                <div className="profile">
+                    Profile
+                </div>
+                <div className='username'>
+                    User Name
+                </div>
+   
+                <input className='textbox' type="text" value={this.state.text} onChange={this.inputText}/>
+                <button className='button' onClick={() => this.sendToLocalStorage()}>Submit</button>
+
                 {JSON.parse(localStorage.getItem('1')) !=  null && 
                 <div>
                    Current username is: {JSON.parse(localStorage.getItem('1'))} 
