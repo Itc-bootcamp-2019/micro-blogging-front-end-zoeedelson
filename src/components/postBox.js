@@ -14,7 +14,6 @@ class PostBox extends React.Component {
       isLoading: false
     };
     this.tweetText = this.tweetText.bind(this);
-    // this.makePublishableTweet = this.makePublishableTweet.bind(this);
   }
 
   addTweet = (newText, newDate, username) => {
@@ -27,26 +26,6 @@ class PostBox extends React.Component {
       isLoading: true
     });
   };
-
-  // componentDidMount() {
-  //   let tweetArray = getTweets();
-  //   tweetArray.then(response =>
-  //     response.data.tweets.map(entry => this.mountingAll(entry))
-  //   );
-  //   setInterval(() => {
-  //     tweetArray = getTweets();
-  //     tweetArray.then(response =>
-  //       this.setState({ postData: response.data.tweets })
-  //     );
-  //   }, 1000);
-  // }
-
-  // mountingAll(item) {
-  //   let prev = this.state.postData;
-  //   this.setState({
-  //     postData: [...prev, item]
-  //   });
-  // }
 
   async sendToServer(e) {
     let newDate = new Date().toISOString();
@@ -63,16 +42,6 @@ class PostBox extends React.Component {
       isLoading: false
     });
   }
-
-  // makePublishableTweet = obj => {
-  //   return (
-  //     <PublishedTweet
-  //       insideText={obj.content}
-  //       date={obj.date}
-  //       userName={obj.userName}
-  //     />
-  //   );
-  // };
 
   tweetText = e => {
     if (JSON.parse(localStorage.getItem("1")) == null) {
@@ -124,9 +93,6 @@ class PostBox extends React.Component {
             <button className="tweetButtonDisabled">Tweet</button>
           )}
         </div>
-        {/* <MyContext.Provider value={this.state}>
-          <PastPosts />
-        </MyContext.Provider> */}
       </div>
     );
   }

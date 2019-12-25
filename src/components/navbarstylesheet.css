@@ -1,26 +1,28 @@
-.nav{
-    display: flex;
-    position: relative;
-    width: 70%;
-    height: 58px;
-    top: 0px;
-    background: #343A40;
-    border-radius: 6px;
-    margin-top: 0;
-    list-style-type: none;
-    align-items:center;
-
+.nav {
+  display: flex;
+  position: relative;
+  width: 70%;
+  height: 58px;
+  top: 0px;
+  background: #343a40;
+  border-radius: 6px;
+  margin-top: 0;
+  list-style-type: none;
+  align-items: center;
 }
 
-.pages{
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 14px;
-    margin-right: 45px;
-    text-decoration: none;
-    list-style-type: none;
-    text-align: center;
+.pages {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin-right: 45px;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
 }
 
-.home{
-    color: white;
+.pages:hover {
+  color: white;
+}
+.white {
+  color: white;
 }

@@ -10,7 +10,6 @@ class AllPosts extends React.Component {
     super(props);
     this.state = {
       postData: []
-      //   adding: () => {},
     };
   }
   componentDidMount() {
