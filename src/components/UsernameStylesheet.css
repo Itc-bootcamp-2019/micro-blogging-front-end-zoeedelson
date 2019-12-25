@@ -14,7 +14,7 @@
     flex-direction: column;
     text-align: left;
     align-items: flex-start;
-    justify-content: space-between;   
+    justify-content: space-between;  
 }
 .button{
     align-self:flex-end;
@@ -34,5 +34,6 @@
     margin-top: 6px;
     margin-bottom: 18px;
     background: transparent; 
-    
+    color: white; 
+
 }

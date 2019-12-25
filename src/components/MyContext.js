@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const MyContext = React.createContext({
-    postData:[],
+  postData: [],
+  adding: () => {}
 });
 
 export default MyContext;
